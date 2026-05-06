@@ -11,10 +11,10 @@ import {
 
 const router = express.Router();
 
-router.get("/products",protect,authorize("admin","seller","user"), getAllProducts);
-router.get("/products/:id",protect,authorize("admin","seller","user"), getSingleProduct);
-router.post("/products",protect,authorize("admin","seller"), createProduct);
-router.put("/products/:id",protect,authorize("admin","seller"), updateProduct);
-router.delete("/products/:id",protect,authorize("admin","seller"), deleteProduct);
+router.get("/products", getAllProducts);
+router.get("/products/:id", getSingleProduct);
+router.post("/products", createProduct);
+router.put("/products/:id", updateProduct);
+router.delete("/products/:id", deleteProduct);
 
 export default router;
